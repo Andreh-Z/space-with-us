@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
+    <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

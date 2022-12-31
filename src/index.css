@@ -18,3 +18,36 @@
 #text1 {
   font-family: "Andika", sans-serif;
 }
+
+#landing-container {
+  background-image: url("./Assets/bg-1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#landing-text {
+  background-color: rgba(0, 0, 0, 0.453);
+  border: solid 2px black;
+}
+
+#table-container {
+  background-image: url("./Assets/bg-2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#list-table {
+  background-color: rgba(0, 0, 0, 0.405);
+  box-shadow: 10px 10px 5px 0px rgba(236, 229, 229, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(236, 229, 229, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(236, 229, 229, 0.75);
+}
+
+#information-bg {
+  background-image: url("./Assets/bg-4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+}

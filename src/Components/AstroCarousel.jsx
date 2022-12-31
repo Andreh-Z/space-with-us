@@ -8,7 +8,7 @@ function AstroCarousel() {
   return (
     <Carousel
       style={{ width: "800px", height: "800px" }}
-      className="rounded shadow-lg"
+      className="rounded shadow-lg border border-2"
     >
       <Carousel.Item interval={5000}>
         <img

@@ -9,8 +9,8 @@ import SpaceSuit from "./SectionInfo/SpaceSuit";
 
 function TableInformation() {
   return (
-    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#gravity">
-      <Row>
+    <Tab.Container defaultActiveKey="#gravity">
+      <Row id="list-table">
         <Col sm={4}>
           <ListGroup>
             <ListGroup.Item action href="#gravity">

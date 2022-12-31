@@ -85,6 +85,7 @@ export default function SpaceSuit() {
             <strong>
               So, if you follow these tips, you'll be sure to have a blast in
               your space suit (while still staying safe and professional, of
+              course).
             </strong>
           </p>
         </span>
@@ -99,9 +100,7 @@ export default function SpaceSuit() {
         />
       </div>
 
-      <h4 className="text-center mb-5">
-        Until next time, stay grounded (but not too grounded)!
-      </h4>
+      <h4 className="text-center mb-5">Until next time!</h4>
     </div>
   );
 }
