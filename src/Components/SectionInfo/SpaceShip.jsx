@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ship from "../../Assets/ship.png";
 import Image from "react-bootstrap/Image";
+import { motion } from "framer-motion";
 
 export default function SpaceShip() {
+  const [isZoomed, setIsZoomed] = useState(false);
   return (
     <div>
       <h1 id="title" className="text-center mb-3">
@@ -66,15 +68,25 @@ export default function SpaceShip() {
             </strong>
           </p>
         </span>
-
-        <Image
-          src={ship}
-          fluid
-          rounded
-          alt="real-ship-100%"
-          style={{ height: "500px" }}
-          className="shadow-lg"
-        />
+        <motion.div
+          onClick={() => setIsZoomed(!isZoomed)}
+          animate={{
+            scale: isZoomed ? 1.5 : 1,
+            x: isZoomed ? -450 : 0,
+            y: isZoomed ? -20 : 0,
+          }}
+          transition={{ duration: 0.5 }}
+          style={{ width: "1920px", height: "1080px" }}
+        >
+          <Image
+            src={ship}
+            fluid
+            rounded
+            alt="real-ship-100%"
+            style={{ height: "500px", cursor: "pointer" }}
+            className="shadow-lg"
+          />{" "}
+        </motion.div>
       </div>
 
       <h4 className="text-center mb-5">

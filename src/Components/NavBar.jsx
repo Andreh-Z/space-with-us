@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Icon of the site</Navbar.Brand>
+        <Navbar.Brand href="/">Icon of the site</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -20,7 +20,7 @@ function NavBar() {
             navbarScroll
           >
             <Nav.Link>
-              <Link to="/">Landing</Link>
+              <Link to="/">Home</Link>
             </Nav.Link>
             <Nav.Link>
               <Link to="/information">Information</Link>

@@ -105,7 +105,11 @@ export default function Company() {
             <h1>About Us</h1>
             <h4>Answers</h4>
           </div>
-          <div className="olStyle shadow-lg" id="text1">
+          <div
+            className="olStyle shadow-lg"
+            style={{ fontSize: "17px" }}
+            id="text1"
+          >
             <AnimatePresence>
               <motion.ol animate={{ x: 0 }} duration={5000}>
                 <motion.li

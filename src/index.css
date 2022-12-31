@@ -9,14 +9,17 @@
 
 #title {
   font-family: "Prosto One", cursive;
+  pointer-events: none;
 }
 
 #text {
   font-family: "Roboto Mono", monospace;
+  pointer-events: none;
 }
 
 #text1 {
   font-family: "Andika", sans-serif;
+  pointer-events: none;
 }
 
 #landing-container {

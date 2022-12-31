@@ -1,8 +1,12 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 import gravity from "../../Assets/gravity.png";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Gravity() {
+  const [isZoomed, setIsZoomed] = useState(false);
+
   return (
     <div>
       <h1 id="title" className="text-center mb-3">
@@ -64,14 +68,25 @@ export default function Gravity() {
           </p>
         </span>
 
-        <Image
-          src={gravity}
-          fluid
-          rounded
-          alt="gravity-by-a-monkey"
-          style={{ height: "500px" }}
-          className="shadow-lg"
-        />
+        <motion.div
+          onClick={() => setIsZoomed(!isZoomed)}
+          animate={{
+            scale: isZoomed ? 1.5 : 1,
+            x: isZoomed ? -450 : 0,
+            y: isZoomed ? -20 : 0,
+          }}
+          transition={{ duration: 0.5 }}
+          style={{ width: "1920px", height: "1080px" }}
+        >
+          <Image
+            src={gravity}
+            fluid
+            rounded
+            alt="gravity-by-a-monkey"
+            style={{ height: "500px", cursor: "pointer" }}
+            className="shadow-lg"
+          />
+        </motion.div>
       </div>
 
       <h4 className="text-center mb-5">

@@ -91,8 +91,8 @@ export default function Food() {
           onClick={() => setIsZoomed(!isZoomed)}
           animate={{
             scale: isZoomed ? 1.5 : 1,
-            x: isZoomed ? -250 : 0,
-            y: isZoomed ? -250 : 0,
+            x: isZoomed ? -450 : 0,
+            y: isZoomed ? -20 : 0,
           }}
           transition={{ duration: 0.5 }}
           style={{ width: "1920px", height: "1080px" }}
@@ -102,7 +102,7 @@ export default function Food() {
             fluid
             rounded
             alt="pizza-astronaut"
-            style={{ height: "500px" }}
+            style={{ height: "500px", cursor: "pointer" }}
             className="shadow-lg"
           />
         </motion.div>
