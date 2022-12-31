@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andika&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#title {
+  font-family: "Prosto One", cursive;
+}
+
+#text {
+  font-family: "Roboto Mono", monospace;
+}
+
+#text1 {
+  font-family: "Andika", sans-serif;
+}
