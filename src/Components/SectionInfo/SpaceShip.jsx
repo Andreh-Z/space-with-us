@@ -71,14 +71,14 @@ export default function SpaceShip() {
           src={ship}
           fluid
           rounded
-          alt="gravity-by-a-monkey"
+          alt="real-ship-100%"
           style={{ height: "500px" }}
           className="shadow-lg"
         />
       </div>
 
       <h4 className="text-center mb-5">
-        Until next time, stay grounded (but not too grounded)!
+        I'll see you in the next category, space suits!
       </h4>
     </div>
   );

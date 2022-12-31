@@ -10,7 +10,7 @@ function AstroCarousel() {
       style={{ width: "800px", height: "800px" }}
       className="rounded shadow-lg"
     >
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={5000}>
         <img
           className="d-block w-100"
           src={travel1}
@@ -26,7 +26,7 @@ function AstroCarousel() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={5000}>
         <img
           className="d-block w-100"
           src={travel2}
@@ -40,7 +40,7 @@ function AstroCarousel() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={5000}>
         <img
           className="d-block w-100"
           src={travel3}
@@ -55,7 +55,7 @@ function AstroCarousel() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={5000}>
         <img
           className="d-block w-100"
           src={travel4}

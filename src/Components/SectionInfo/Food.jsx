@@ -87,7 +87,7 @@ export default function Food() {
           src={food}
           fluid
           rounded
-          alt="gravity-by-a-monkey"
+          alt="pizza-astronaut"
           style={{ height: "500px" }}
           className="shadow-lg"
         />
