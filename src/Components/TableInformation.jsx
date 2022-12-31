@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import Food from "./SectionInfo/Food";
 import Gravity from "./SectionInfo/Gravity";
+import SpaceShip from "./SectionInfo/SpaceShip";
 
 function TableInformation() {
   return (
@@ -17,6 +18,9 @@ function TableInformation() {
             <ListGroup.Item action href="#food">
               FOOD
             </ListGroup.Item>
+            <ListGroup.Item action href="#spaceship">
+              SPACE SHIP
+            </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col sm={8}>
@@ -26,6 +30,9 @@ function TableInformation() {
             </Tab.Pane>
             <Tab.Pane eventKey="#food">
               <Food />
+            </Tab.Pane>
+            <Tab.Pane eventKey="#spaceship">
+              <SpaceShip />
             </Tab.Pane>
           </Tab.Content>
         </Col>
