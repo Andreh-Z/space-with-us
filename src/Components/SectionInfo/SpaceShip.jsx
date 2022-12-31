@@ -1,69 +1,74 @@
 import React from "react";
+import ship from "../../Assets/ship.png";
+import Image from "react-bootstrap/Image";
 
 export default function SpaceShip() {
   return (
     <div>
       <h1 id="title" className="text-center mb-3">
-        Greetings, fellow space enthusiasts!
+        Space ships, oh how we love them!
       </h1>
       <p id="text">
-        I am here to talk to you about the concept of gravity, a force that
-        seems to have a strong hold on all of us (quite literally). <br />
-        You see, gravity is a mysterious force that keeps us firmly planted on
-        the ground, and without it, we'd all be floating off into the great
-        unknown (although that might be a fun vacation).
+        Whether you're a seasoned astronaut or just a space enthusiast, there's
+        something about these amazing vessels that captures the imagination and
+        inspires a sense of wonder.
       </p>
 
       <p id="text">
-        But seriously, gravity is an important force to consider when it comes
-        to space travel. Without it, astronauts would have a tough time
-        navigating their way through the cosmos. And let's not forget about the
-        Moon, which is essentially just a giant rock floating around in space
-        thanks to the Earth's gravitational pull.
+        But let's be real, space ships aren't always the most practical mode of
+        transportation. I mean, have you ever tried to parallel park a space
+        shuttle? Talk about a nightmare! And don't even get me started on the
+        line at the space station gas station.
       </p>
       <p id="text">
-        But enough about the science, let's get to the fun stuff. Have you ever
-        tried to jump really high on Earth, only to be brought back down to the
-        ground by the pesky force of gravity? Well, on the Moon, you could jump
-        much higher, thanks to the weaker gravitational pull. <br />
-        Imagine all the fun you could have on a Moon bounce house!
+        And let's not forget about the food. Have you ever tried to eat
+        freeze-dried ice cream in zero gravity? It's a mess, let me tell you.
+        But hey, at least you don't have to worry about getting a cavity from
+        all that space sugar.
       </p>
       <p id="text">
-        In conclusion, gravity may seem like a drag (pun intended), but it's
-        actually an essential force that keeps us grounded (literally and
-        figuratively). So next time you're feeling weighed down by the stresses
-        of everyday life, just remember that gravity has your back (and your
-        feet).
+        But despite their quirks, space ships are still pretty amazing. From the
+        sleek design of the Apollo capsules to the futuristic look of the
+        International Space Station, these vessels have taken us to places we
+        never could have imagined.
+      </p>
+
+      <p id="text1">
+        So let's give a round of applause for space ships, the coolest (and most
+        impractical) mode of transportation in the universe!
       </p>
       <div className="d-flex flex-row gap-4 mb-5 mt-5">
         <span className="fs-4" id="text1">
           <p>
-            The concept of gravity has been around for centuries, but it wasn't
-            until the 17th century that it was formally studied and understood.
+            Did you know that the space shuttle's main engines were so powerful
+            that they could lift the weight of about 70 elephants? That's right,
+            each of the space shuttle's three main engines produced over 1.5
+            million pounds of thrust, making it one of the most powerful rockets
+            ever built.
           </p>
           <p>
-            It was Sir Isaac Newton who is credited with the discovery of
-            gravity. In 1687, he published his laws of motion and universal
-            gravitation, which explained how objects move and the forces that
-            act upon them.
+            The space shuttle was used for 135 missions between 1981 and 2011,
+            and played a crucial role in building and servicing the
+            International Space Station. It was also the first reusable
+            spacecraft, meaning it could be used for multiple missions rather
+            than being discarded after a single use.
           </p>
           <p>
-            Newton's work was based on the observations and experiments of other
-            scientists, including Galileo Galilei and Johannes Kepler. However,
-            it was Newton who was able to mathematically describe the laws of
-            motion and universal gravitation, which helped to establish the
-            modern understanding of gravity.
+            Despite its impressive capabilities, the space shuttle was retired
+            in 2011, and has since been replaced by the SpaceX Dragon and the
+            Boeing CST-100 Starliner. These new spacecraft are designed to be
+            even more efficient and cost-effective, and will help pave the way
+            for future space exploration and tourism.
           </p>
-          <p>
-            Since then, our understanding of gravity has continued to evolve and
-            expand, with the development of Einstein's theory of relativity and
-            the discovery of black holes. Today, gravity remains an important
-            and fascinating subject of study in physics and astronomy.
+          <p id="text1">
+            <strong>
+              I hope you found this fun fact about space ships interesting!
+            </strong>
           </p>
         </span>
 
         <Image
-          src={gravity}
+          src={ship}
           fluid
           rounded
           alt="gravity-by-a-monkey"
