@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Container, Row, Image, Button } from "react-bootstrap";
+import { Col, Container, Row, Image } from "react-bootstrap";
 import astro from "../Assets/astro.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { BsArrow90DegLeft } from "react-icons/bs";
@@ -132,7 +132,6 @@ export const Landing = () => {
           >
             <Link
               to="/information"
-              id="text"
               className="text-decoration-none text-white fs-3 circle"
             >
               Sounds fantastic. I'm interested!

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import AstroLost1 from "../Assets/astro-lost1.jpg";
 import AstroCarousel from "./AstroCarousel";
 import NavBar from "./NavBar";

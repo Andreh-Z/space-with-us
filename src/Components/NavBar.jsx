@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -30,7 +28,7 @@ function NavBar() {
                 <Link to="/About">About us</Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                <Link to="/Developer">Who made this</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">

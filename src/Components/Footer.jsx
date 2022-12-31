@@ -24,14 +24,14 @@ function Footer() {
         <Row>
           <Col>
             <p>
-              Follow us on social media:{" "}
-              <a href="#">
+              Follow us on social media:
+              <a href="http://twitter.com">
                 <FaTwitter />
-              </a>{" "}
-              <a href="#">
+              </a>
+              <a href="http://twitter.com">
                 <FaFacebook />
-              </a>{" "}
-              <a href="#">
+              </a>
+              <a href="http://twitter.com">
                 <FaInstagram />
               </a>
             </p>
