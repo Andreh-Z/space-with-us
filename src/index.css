@@ -43,6 +43,22 @@
   -moz-box-shadow: 10px 10px 5px 0px rgba(236, 229, 229, 0.75);
 }
 
+.textContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.imagen-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.olStyle {
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
 #information-bg {
   background-image: url("./Assets/bg-4.png");
   background-size: cover;

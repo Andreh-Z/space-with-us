@@ -1,8 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { Image } from "react-bootstrap";
 import food from "../../Assets/food.png";
+import { motion } from "framer-motion";
 
 export default function Food() {
+  const [isZoomed, setIsZoomed] = useState(false);
+
   return (
     <div>
       <h1 id="title" className="text-center mb-3">
@@ -83,14 +87,25 @@ export default function Food() {
           </ol>
         </span>
 
-        <Image
-          src={food}
-          fluid
-          rounded
-          alt="pizza-astronaut"
-          style={{ height: "500px" }}
-          className="shadow-lg"
-        />
+        <motion.div
+          onClick={() => setIsZoomed(!isZoomed)}
+          animate={{
+            scale: isZoomed ? 1.5 : 1,
+            x: isZoomed ? -250 : 0,
+            y: isZoomed ? -250 : 0,
+          }}
+          transition={{ duration: 0.5 }}
+          style={{ width: "1920px", height: "1080px" }}
+        >
+          <Image
+            src={food}
+            fluid
+            rounded
+            alt="pizza-astronaut"
+            style={{ height: "500px" }}
+            className="shadow-lg"
+          />
+        </motion.div>
       </div>
 
       <h4 className="text-center mb-5">

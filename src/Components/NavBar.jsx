@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">Icon of the site</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,10 +19,16 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <Nav.Link>
+              <Link to="/">Landing</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/information">Information</Link>
+            </Nav.Link>
+            <NavDropdown title="Utilities" id="navbarScrollingDropdown">
+              <NavDropdown.Item>
+                <Link to="/About">About us</Link>
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
               </NavDropdown.Item>

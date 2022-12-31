@@ -7,6 +7,10 @@ import TableInformation from "./TableInformation";
 import { motion } from "framer-motion";
 
 export default function Information() {
+  const text =
+    "Here are really usefull information if you want to travel with us!";
+  const characters = text.split("");
+
   return (
     <Container fluid className="bg-dark text-light">
       <Row>
@@ -49,7 +53,6 @@ export default function Information() {
               If anyone asks where they are now, we don't know either! Just
               kidding, they're probably having a blast exploring the cosmos
               <small className="text-muted">
-                {" "}
                 <strong>or maybe not...</strong>
               </small>
             </p>
@@ -61,7 +64,16 @@ export default function Information() {
         <hr />
         <Col lg={12} className="text-center mb-5 mt-5" id="title">
           <h1>
-            Here are really usefull information if you want to travel with us!
+            {characters.map((character, index) => (
+              <motion.span
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: index * 0.1 }}
+                key={index}
+              >
+                {character}
+              </motion.span>
+            ))}
           </h1>
         </Col>
         <hr />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Image, Button } from "react-bootstrap";
-import astro from "../Assets/astro.jpg";
+import astro from "../Assets/astro.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { IconContext } from "react-icons";
@@ -10,6 +10,10 @@ import Footer from "./Footer";
 
 export const Landing = () => {
   const [hover, setHover] = useState(false);
+
+  const text =
+    "This could be you, if you trusted us... well, maybe not exactly like this, but you get the idea!";
+  const characters = text.split("");
 
   return (
     <Container
@@ -48,8 +52,16 @@ export const Landing = () => {
 
           <div className="pt-5">
             <h1 id="title">
-              This could be you, if you trusted us... well, maybe not exactly
-              like this, but you get the idea!
+              {characters.map((character, index) => (
+                <motion.span
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  key={index}
+                >
+                  {character}
+                </motion.span>
+              ))}
             </h1>
           </div>
         </Col>
