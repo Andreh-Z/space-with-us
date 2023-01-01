@@ -11,9 +11,9 @@ import { motion } from "framer-motion";
 
 const Developer = () => {
   const text1 =
-    "Greetings, my name is Maximiliano and I am 25 years of age. I hailfrom Uruguay and one of my hobbies is participating in sports and taying active through exercise. I am an animal lover andappreciate clean, well-designed interfaces that are easy tounderstand. I am always eager to learn and am willing to work hardin order to improve my skills and knowledge.";
+    "Greetings, my name is Maximiliano and I am 25 years of age. I hail from Uruguay and one of my hobbies is participating in sports and staying active through exercise. I am an animal lover and appreciate clean, well-designed interfaces that are easy to understand. I am always eager to learn and am willing to work hard in order to improve my skills and knowledge.";
   const text2 =
-    "I am a native Spanish speaker with a high level of English, asevidenced by my C1 certification. In addition to my languageskills, I have a strong background in programming and have extensive knowledge in JavaScript, React, NodeJS, and Express. I have completed several projects using these technologies,demonstrating my ability to develop high-quality software.";
+    "I am a native Spanish speaker with a high level of English, as evidenced by my C1 certification. In addition to my language skills, I have a strong background in programming and have extensive knowledge in JavaScript, React, NodeJS, and Express. I have completed several projects using these technologies,demonstrating my ability to develop high-quality software.";
   const text3 =
     "I possess a strong motivation and work ethic, with a passion for technology. I am a team player and possess strong communication and social skills. I believe that my combination of language skills, technical expertise, and determination make me a valuable asset to any team. I am excited to continue learning and developing my skills in order to make a positive contribution to any organization I am a part of. My long-term professional goal is to specialize in a specific area of software development and continue to grow and evolve as a developer.";
 

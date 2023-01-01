@@ -36,7 +36,7 @@ body {
 
 #landing-text {
   background-color: rgba(0, 0, 0, 0.453);
-  border: solid 2px black;
+  backdrop-filter: blur(20px);
 }
 
 #table-container {
