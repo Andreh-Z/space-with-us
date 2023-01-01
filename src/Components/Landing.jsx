@@ -22,7 +22,7 @@ export const Landing = () => {
       className="bg-dark text-light overflow-hidden"
     >
       <Row>
-        <Col lg={12}>
+        <Col lg={12} className="p-0 m-0">
           <NavBar />
         </Col>
         <Col lg={6} className="text-start m-0 p-0 ps-2 pt-2">

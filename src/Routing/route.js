@@ -3,6 +3,7 @@ import Landing from "../Components/Landing";
 import Information from "../Components/Information";
 import Company from "../Components/AboutSections/Company";
 import Developer from "../Components/AboutSections/Developer";
+import Resources from "../Components/AboutSections/Resources";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/Developer",
     element: <Developer />,
+  },
+  {
+    path: "/resources",
+    element: <Resources />,
   },
 ]);
 
