@@ -10,6 +10,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 
 /* Establecer fuentes de Google Fonts para diferentes elementos */
 #title {
@@ -37,6 +40,18 @@ body {
 #landing-text {
   background-color: rgba(0, 0, 0, 0.453);
   backdrop-filter: blur(20px);
+}
+
+/* NavBar */
+#navBar {
+  background-color: rgba(0, 0, 0, 0.453);
+  backdrop-filter: blur(20px);
+  font-family: "Prosto One", cursive;
+  font-size: 20px;
+}
+
+#navbarScrollingDropdown {
+  color: white;
 }
 
 #table-container {
