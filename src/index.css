@@ -1,12 +1,17 @@
+/* Importar fuentes de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Andika&display=swap");
-* {
-  margin: 0px;
-  padding: 0px;
+
+/* Establecer valores por defecto para margin y padding en 0 y utilizar box-sizing border-box */
+html,
+body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* Establecer fuentes de Google Fonts para diferentes elementos */
 #title {
   font-family: "Prosto One", cursive;
   pointer-events: none;
@@ -22,6 +27,7 @@
   pointer-events: none;
 }
 
+/* Establecer estilos para contenedores de página */
 #landing-container {
   background-image: url("./Assets/bg-1.png");
   background-size: cover;
@@ -46,11 +52,13 @@
   -moz-box-shadow: 10px 10px 5px 0px rgba(236, 229, 229, 0.75);
 }
 
+/* Establecer estilos para contenedores de texto */
 .textContainer {
   position: relative;
   z-index: 1;
 }
 
+/* Establecer estilos para imágenes */
 .imagen-about {
   position: absolute;
   top: 0;
@@ -58,15 +66,17 @@
   z-index: -1;
 }
 
+/* Establecer estilos para elementos de lista */
 .olStyle {
   background-color: rgba(0, 0, 0, 0.616);
 }
 
+/* Establecer estilos para contenedor de información */
 #information-bg {
   background-image: url("./Assets/bg-4.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }

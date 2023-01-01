@@ -1,39 +1,124 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { Image, Container, Row, Col } from "react-bootstrap";
-import test from "../../Assets/travel4.png";
+import me from "../../Assets/me.png";
 import Footer from "../Footer";
 import NavBar from "../NavBar";
+import { Modal, Button } from "react-bootstrap";
 
-export default function Developer() {
+import { FaReact, FaBootstrap } from "react-icons/fa";
+import { SiReactrouter, SiFramer } from "react-icons/si";
+import { motion } from "framer-motion";
+
+const Developer = () => {
+  const text1 =
+    "Greetings, my name is Maximiliano and I am 25 years of age. I hailfrom Uruguay and one of my hobbies is participating in sports and taying active through exercise. I am an animal lover andappreciate clean, well-designed interfaces that are easy tounderstand. I am always eager to learn and am willing to work hardin order to improve my skills and knowledge.";
+  const text2 =
+    "I am a native Spanish speaker with a high level of English, asevidenced by my C1 certification. In addition to my languageskills, I have a strong background in programming and have extensive knowledge in JavaScript, React, NodeJS, and Express. I have completed several projects using these technologies,demonstrating my ability to develop high-quality software.";
+  const text3 =
+    "I possess a strong motivation and work ethic, with a passion for technology. I am a team player and possess strong communication and social skills. I believe that my combination of language skills, technical expertise, and determination make me a valuable asset to any team. I am excited to continue learning and developing my skills in order to make a positive contribution to any organization I am a part of. My long-term professional goal is to specialize in a specific area of software development and continue to grow and evolve as a developer.";
+
+  const characters1 = useMemo(() => text1.split(""), []);
+  const characters2 = useMemo(() => text2.split(""), []);
+  const characters3 = useMemo(() => text3.split(""), []);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+
   return (
-    <Container className="border border-2">
-      <Row className="border border-2">
-        <Col lg={12}>
-          <NavBar />
-        </Col>
+    <div className="bg-dark">
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal Title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Modal body text goes here.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Container className="bg-dark text-light min-vh-100">
+        <Row>
+          <Col lg={12}>
+            <NavBar />
+          </Col>
 
-        <Col className="border border-2" lg={12}>
-          ¿Quien creo este sitio web?
-        </Col>
-        <Col lg={6}>
-          <Image src={test} fluid />
-        </Col>
-        <Col lg={6}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit,
-          deserunt quae. Modi perspiciatis beatae dignissimos. Necessitatibus,
-          dolores! Odio nihil placeat accusamus rerum eos quo rem incidunt!
-          Numquam maiores accusantium sequi?
-        </Col>
+          <Col className="border border-2 rounded" lg={12} id="title">
+            <h1 className="text-center mt-3 mb-3"> Who created this site?</h1>
+          </Col>
+          <Col lg={6} className="d-flex align-items-center">
+            <Image src={me} fluid rounded className="shadow-lg" />
+          </Col>
+          <Col
+            lg={6}
+            className="mt-2 text-start rounded d-flex shadow-lg align-items-center fs-5 border border-2"
+            id="text1"
+          >
+            <span className="p-2">
+              {characters1.map((character, index) => (
+                <motion.span
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  key={index}
+                >
+                  {character}
+                </motion.span>
+              ))}
+              <br />
+              <br />
+              {characters2.map((character, index) => (
+                <motion.span
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  key={index}
+                >
+                  {character}
+                </motion.span>
+              ))}
+              <br />
+              <br />
+              {characters3.map((character, index) => (
+                <motion.span
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  key={index}
+                  exit={{ x: 100, opacity: 0 }}
+                >
+                  {character}
+                </motion.span>
+              ))}
+            </span>
+          </Col>
 
-        <Col lg={12}>Que tecnologias fueron usadas?</Col>
-        <Col lg={12}>
-          Lista de tecnologias:
-          ejemplo,ejemplo,ejemplo,ejemplo,ejemplo,ejemplo,ejemplo,
-        </Col>
-        <Col lg={12} className="fixed-bottom">
-          <Footer />
-        </Col>
-      </Row>
-    </Container>
+          <Col lg={12} className="text-center border border-2 mt-5" id="title">
+            <h1>What technologies have I used on this site?</h1>
+          </Col>
+          <Col lg={12} className="d-flex justify-content-around mt-3">
+            <Button onClick={handleShow}>
+              <FaReact size={60} className="text-light" />
+            </Button>
+            <Button onClick={handleShow}>
+              <SiReactrouter size={60} className="text-light" />
+            </Button>
+            <Button onClick={handleShow}>
+              <FaBootstrap size={60} className="text-light" />
+            </Button>
+            <Button onClick={handleShow}>
+              <SiFramer size={60} className="text-light" />
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
-}
+};
+
+export default Developer;
