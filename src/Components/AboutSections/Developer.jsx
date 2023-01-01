@@ -30,15 +30,36 @@ const Developer = () => {
     <div className="bg-dark">
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal Title</Modal.Title>
+          <Modal.Title>Tech descriptions</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Modal body text goes here.</Modal.Body>
+        <Modal.Body>
+          <li>
+            <mark>React:</mark> React is a JavaScript library for building user
+            interfaces. It allows developers to create reusable UI components
+            and efficiently update and render components in response to data
+            changes.
+          </li>
+          <li>
+            <mark>React Router:</mark> React Router is a library for routing in
+            React apps. It provides a simple way to declaratively define routes
+            and navigate between them in a React app.
+          </li>
+          <li>
+            <mark>Bootstrap:</mark> Bootstrap is a front-end framework for
+            building responsive, mobile-first websites. It provides a set of
+            pre-styled UI components and layout grids, as well as tools for
+            creating custom styles and responsive design.
+          </li>
+          <li>
+            <mark>Framer Motion:</mark> Framer Motion is a library for animating
+            elements in a React app. It provides a declarative API for creating
+            and controlling animations, as well as a set of pre-built animation
+            components.
+          </li>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
