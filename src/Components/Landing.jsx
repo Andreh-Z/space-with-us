@@ -138,7 +138,7 @@ export const Landing = () => {
             </Link>
           </motion.button>
         </Col>
-        <Col lg={12}>
+        <Col lg={12} className="m-0 p-0">
           <Footer />
         </Col>
       </Row>

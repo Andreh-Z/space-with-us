@@ -51,7 +51,8 @@ export default function Information() {
               style={{ textShadow: "4px 4px 2px rgba(0,0,0,1)" }}
             >
               If anyone asks where they are now, we don't know either! Just
-              kidding, they're probably having a blast exploring the cosmos
+              kidding, they're probably having a blast exploring the
+              cosmos&nbsp;
               <small className="text-muted">
                 <strong>or maybe not...</strong>
               </small>

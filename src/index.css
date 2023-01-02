@@ -44,8 +44,8 @@ a {
 
 /* NavBar */
 #navBar {
-  background-color: rgba(0, 0, 0, 0.453);
-  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.311);
+  backdrop-filter: blur(5px);
   font-family: "Prosto One", cursive;
   font-size: 20px;
 }
@@ -94,4 +94,26 @@ a {
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
+}
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.311);
+  backdrop-filter: blur(5px);
+  font-family: "Prosto One", cursive;
+}
+
+#lista {
+  text-decoration: none;
+  list-style: none;
+}
+
+#lista a {
+  color: white;
+}
+
+.hvr-grow {
+  transition: transform 0.2s; /* Animation speed */
+}
+.hvr-grow:hover {
+  transform: scale(1.5); /* Scale up the element by 50% on hover */
 }
