@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
+import "./loading.css";
 
-const LoadingIndicator = () => (
-  <motion.div
-    initial={{ scale: 0 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 1 }}
-  >
-    Loading...
-  </motion.div>
-);
+const LoadingIndicator = () => {
+  return (
+    <ul id="ul">
+      <li> </li>
+      <li> </li>
+      <li> </li>
+      <li> </li>
+    </ul>
+  );
+};
 
 export default LoadingIndicator;

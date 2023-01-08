@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import LoadingIndicator from "./LoadingIndicator";
+import ErrorPage from "./ErrorPage";
 
 // Usamos `lazy` para cargar cada componente de forma "perezosa" (lazy-loading)
 const Landing = lazy(() => import("../Components/Landing"));
 const Information = lazy(() => import("../Components/Information"));
 const Company = lazy(() => import("../Components/AboutSections/Company"));
 const Developer = lazy(() => import("../Components/AboutSections/Developer"));
-const Resources = lazy(() => import("../Components/AboutSections/Resources"));
+const Flighs = lazy(() => import("../Components/AboutSections/Flighs"));
 
 // Agregamos un componente `Suspense` para mostrar un indicador de carga mientras se cargan los componentes
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         <Landing />
       </Suspense>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/information",
@@ -44,12 +46,16 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/resources",
+    path: "/flighs",
     element: (
       <Suspense fallback={<LoadingIndicator />}>
-        <Resources />
+        <Flighs />
       </Suspense>
     ),
+  },
+  {
+    path: "/pruebas",
+    element: <LoadingIndicator />,
   },
 ]);
 

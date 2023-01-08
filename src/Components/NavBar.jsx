@@ -73,8 +73,8 @@ function NavBar() {
                 <NavDropdown.Item>
                   <motion.div whileHover={{ scale: 1.1 }}>
                     {/* Agrega un efecto de entrada suave al hacer hover */}
-                    <Link to="/resources" className="text-dark">
-                      Bank of resources
+                    <Link to="/flighs" className="text-dark">
+                      Flighs
                     </Link>
                   </motion.div>
                 </NavDropdown.Item>

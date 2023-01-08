@@ -14,6 +14,12 @@ a {
   text-decoration: none;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 /* Establecer fuentes de Google Fonts para diferentes elementos */
 #title {
   font-family: "Prosto One", cursive;
@@ -28,6 +34,10 @@ a {
 #text1 {
   font-family: "Andika", sans-serif;
   pointer-events: none;
+}
+
+#button1 {
+  font-family: "Andika", sans-serif;
 }
 
 /* Establecer estilos para contenedores de página */
@@ -116,4 +126,45 @@ a {
 }
 .hvr-grow:hover {
   transform: scale(1.5); /* Scale up the element by 50% on hover */
+}
+
+#black-background {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background: white;
+  opacity: 0;
+}
+
+.star.visible {
+  animation: twinkle 1s infinite;
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 1;
+  }
+}
+
+#coming-soon {
+  background-image: url("./Assets/coming-soon.png");
+  min-height: 100vh;
+  min-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

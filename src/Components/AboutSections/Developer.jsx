@@ -136,6 +136,10 @@ const Developer = () => {
               <SiFramer size={60} className="text-light" />
             </Button>
           </Col>
+
+          <Col lg={12} className="mt-5">
+            <Footer />
+          </Col>
         </Row>
       </Container>
     </div>
