@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Container, Row, Col, Button, Modal, Alert } from "react-bootstrap";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function Flights() {
@@ -14,6 +14,8 @@ export default function Flights() {
   const [hover, setHover] = useState(false);
   const [hover2, setHover2] = useState(false);
   const interval = useRef();
+  const [showModal, setShowModal] = useState(false);
+  const [alertVariant, setAlertVariant] = useState("danger");
 
   // Use the useHistory hook to get access to the history object
   // which you can use to navigate to other routes
@@ -66,12 +68,26 @@ export default function Flights() {
   }, [seconds]);
 
   function handleClick() {
-    alert("We know you don't, don't try to lie to us!");
-    history("/");
+    setAlertVariant("danger");
+    setShowModal(true);
+    setTimeout(() => {
+      history("/");
+    }, 5000);
   }
 
   return (
     <Container fluid id="coming-soon">
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Liar detected!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Alert variant={alertVariant}>
+            Why are you lying to us? We know you are not capable of flying a
+            spaceship. Better go check out the rest of the site.{" "}
+          </Alert>
+        </Modal.Body>
+      </Modal>
       <Row lg={1}>
         <Col className="d-flex flex-column justify-content-center align-items-center">
           <div>
