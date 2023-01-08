@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Flights() {
   const [years, setYears] = useState(99);
@@ -12,6 +14,10 @@ export default function Flights() {
   const [hover, setHover] = useState(false);
   const [hover2, setHover2] = useState(false);
   const interval = useRef();
+
+  // Use the useHistory hook to get access to the history object
+  // which you can use to navigate to other routes
+  const history = useNavigate();
 
   function tick() {
     setSeconds(seconds - 1);
@@ -59,6 +65,11 @@ export default function Flights() {
     return () => clearInterval(interval.current);
   }, [seconds]);
 
+  function handleClick() {
+    alert("We know you don't, don't try to lie to us!");
+    history("/");
+  }
+
   return (
     <Container fluid id="coming-soon">
       <Row lg={1}>
@@ -100,6 +111,7 @@ export default function Flights() {
               color: "white",
               textTransform: "uppercase",
             }}
+            onClick={handleClick}
           >
             I know how to fly a spaceship
           </motion.button>
@@ -109,15 +121,17 @@ export default function Flights() {
             onHoverEnd={() => setHover2(false)}
             id="button1"
             style={{
-              backgroundColor: hover2 ? "green" : "blue",
-              padding: "15px",
+              backgroundColor: hover2 ? "green" : "orange",
+              padding: "20px",
               border: "transparent",
               borderRadius: "20px",
-              color: "white",
+              color: hover2 ? "white" : "purple",
               textTransform: "uppercase",
             }}
           >
-            I'll wait for the pilots
+            <Link className="text-decoration-none text-white" to="/">
+              No, I don't know how to fly a spaceship
+            </Link>
           </motion.button>
         </Col>
       </Row>
